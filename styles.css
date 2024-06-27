@@ -36,7 +36,8 @@ header nav ul li {
 }
 
 header nav a:hover {
-    color:rgb(8, 238, 43);
+    color:rgba(63, 205, 160, 0.76);
+    cursor: pointer;
 }
 
 #page-logo img {
@@ -134,12 +135,14 @@ iframe {
 }
 
 .col-4 a:hover {
+    cursor: pointer;
     div {
         background-color: rgba(66, 135, 113, 0.503);
     }
     p {
         color: black;
     };
+    
 }
 
 .col-4 p {
@@ -167,4 +170,4 @@ iframe {
     header nav {
         display: none;
       }
-
+    }
