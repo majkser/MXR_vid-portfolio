@@ -38,6 +38,7 @@ header nav ul li {
 header nav a:hover {
     color:rgba(63, 205, 160, 0.76);
     cursor: pointer;
+    transition: color 0.4s;
 }
 
 #page-logo img {
@@ -47,7 +48,6 @@ header nav a:hover {
 }
 
 header a {
-    transition: color 0.4s;
     text-decoration: none;
     color: white;
 }
@@ -83,6 +83,7 @@ h3 {
 }
 
 a {
+    transition: color 0.4s;
     text-decoration: none;
 }
 
@@ -136,11 +137,25 @@ iframe {
 
 .col-4 a:hover {
     cursor: pointer;
+    
     div {
-        background-color: rgba(66, 135, 113, 0.503);
+        background-color: rgba(66, 135, 113, 0.503);    
+        transition: background-color 0.4s;
     }
     p {
         color: black;
+        transition: color 0.4s;
+    };
+    
+}
+
+.col-4 a:not(:hover) {
+
+    div {
+        transition: background-color 0.4s;
+    }
+    p {
+        transition: color 0.4s;
     };
     
 }
