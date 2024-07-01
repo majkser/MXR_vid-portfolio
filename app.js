@@ -17,29 +17,29 @@ function changeSrc(link, event) {
   event.preventDefault();
 }
 
-function addYtLinks(elements, links){
-  if(elements.length !== links.length){
+function addYtLinks(elements, links) {
+  if (elements.length !== links.length) {
     console.log("Error with setting yt links!");
-  }else{
-    for(let i = 0; i < ytLinks.length;i++){
-      ytLinks[i].addEventListener('click',(event)=> changeSrc(links[i],event));
-    }
+  } else {
+    elements.forEach((element, index) => {
+      element.addEventListener("click", (event) =>
+        changeSrc(links[index], event)
+      );
+    });
   }
 }
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   // Query all carousel elements
-  var carousels = document.querySelectorAll(".carousel");
+  const carousels = document.querySelectorAll(".carousel");
 
   carousels.forEach(function (carousel) {
     // Initialize each carousel with the 'pause' option set to false
-    var carouselInstance = new bootstrap.Carousel(carousel, {
+    new bootstrap.Carousel(carousel, {
       pause: false,
     });
   });
 });
 
 //START
-addYtLinks(ytLinks,links);
+addYtLinks(ytLinks, links);
