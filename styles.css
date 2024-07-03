@@ -1,6 +1,7 @@
 body {
     background-color: black ;
     font-family: "Open Sans", sans-serif;
+    text-align: center;
 }
 
 header {
@@ -76,6 +77,10 @@ section {
 
 #fotografia {
     margin: 20rem 0;
+}
+
+h2 {
+    margin-bottom: 2rem;
 }
 
 h3 {
@@ -180,6 +185,71 @@ iframe {
     border-radius: 12px;
 }
 
+#messageDiv {
+    display: block;
+    width: 55%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 16px;
+    border: 5px dashed;
+    border-color: rgba(63, 205, 160, 0.76);
+}
+
+#messageDiv p {
+    margin: 1rem auto;
+}
+
+#messageDiv div {
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    border: 2.5px solid;
+    border-color: rgba(63, 205, 160, 0.76);
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+input:focus, textarea:focus {
+    border-color: white;
+    outline: 0 none;
+    transition: 0.4s;
+}
+
+input:not(focus), textarea:not(focus) {
+    transition: 0.4s;
+}
+
+#majl {
+    width: 33%;
+}
+
+#majlText {
+    width: 90%;
+    height: 10rem;
+}
+
+button {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.25rem;
+    background-color: black;
+    color: white;
+    border: 2.5px solid;
+    border-color: rgba(63, 205, 160, 0.76);
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgba(63, 205, 160, 0.76);
+    color: black;
+    outline: 0 none;
+    transition: 0.4s;
+}
+
+button:not(hover) {
+    transition: 0.4s;
+}
 
 @media (max-width: 768px) {
     header nav {
