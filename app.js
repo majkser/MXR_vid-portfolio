@@ -43,3 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //START
 addYtLinks(ytLinks, links);
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  if (window.scorll !== 0) {
+    header.classList.add("transparent");
+  } else {
+    header.classList.remove("transparent");
+  }
+});
