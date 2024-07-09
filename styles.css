@@ -10,10 +10,19 @@ header {
     padding: 1rem;
     margin: 0 auto 3rem auto;
     text-align: center;
-    position: relative;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 7rem;
+    z-index: 1000;
 }
+
+header.transparent {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(36, 36, 36, 0.5));
+}
+
 header nav {
     margin: 0 0 0 4rem;
     display: flex;
@@ -43,9 +52,9 @@ header nav a:hover {
 }
 
 #page-logo img {
-    width: 15rem;
-    height: 10rem;
-    object-fit: cover;
+    height: 100%;
+    scale: 200%;
+    object-fit: contain;
 }
 
 header a {
@@ -73,6 +82,10 @@ main {
 
 section {
     margin: 2rem 0;
+}
+
+#TELEDYSKI {
+    margin-top: 8rem;
 }
 
 #fotografia {
