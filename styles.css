@@ -1,6 +1,6 @@
 body {
-    background-color: black ;
-    font-family: "Open Sans", sans-serif;
+    background-color: #080808;
+    font-family: "Poppins", "Open Sans", sans-serif;
     text-align: center;
 }
 
@@ -19,6 +19,10 @@ header {
     z-index: 1000;
 }
 
+section {
+    padding-top: 150px;
+}
+
 header.transparent {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(36, 36, 36, 0.5));
 }
@@ -32,7 +36,7 @@ header nav {
 
 header nav ul {
     list-style-type: none;
-    margin:auto;
+    margin: auto;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -46,15 +50,37 @@ header nav ul li {
 }
 
 header nav a:hover {
-    color:rgba(63, 205, 160, 0.76);
+    color: rgba(63, 205, 160, 0.76);
     cursor: pointer;
-    transition: color 0.4s;
+    transition: 0.4s ease-out;
+}
+
+header nav li:hover {
+    scale: 110%;
+    transition: 0.4s ease-out;
+}
+
+header nav li:not(hover) {
+    scale: 100%;
+    transition: 0.4s ease-out;
 }
 
 #page-logo img {
     height: 100%;
-    scale: 200%;
+    scale: 90%;
     object-fit: contain;
+}
+
+#LoGo:hover {
+    cursor: pointer;
+    transition: scale 0.4s;
+    scale: 115%;
+}
+
+#LoGo:not(hover) {
+    cursor: pointer;
+    transition: scale 0.4s;
+    scale: 90%;
 }
 
 header a {
@@ -81,19 +107,21 @@ main {
 }
 
 section {
-    margin: 2rem 0;
+    margin: 0;
 }
 
 #TELEDYSKI {
-    margin-top: 8rem;
+    margin-top: 0;
 }
 
-#fotografia {
-    margin: 20rem 0;
+#FOTOGRAFIA {
+    margin: 8rem 0;
 }
 
 h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    color: rgba(63, 205, 160, 0.6);
 }
 
 h3 {
@@ -134,12 +162,82 @@ ol {
 
 }
 
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 iframe {
     border-radius: 12px;
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.slideIn {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out forwards;
+}
+
+.slideIn.visible {
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes opacityResize {
+    from {
+        opacity: 0;
+        scale: 90%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.opacityResize {
+    opacity: 0;
+    transition: opacityResize 0.75s ease-out forwards;
+}
+
+.opacityResize.visible {
+    animation: opacityResize 0.75s ease-out forwards;
+}
+
+@keyframes slideIn-RtoL {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.col-4 {
+    animation: slideIn-RtoL 1s ease-out forwards;
+    opacity: 0;
+}
+
+.slideIn2 {
+    animation: slideIn-RtoL 1s ease-out forwards;
+    opacity: 0;
+}
+
+.slideIn2.visible {
+    animation: slideIn-RtoL 1s ease-out forwards;
 }
 
 .col-4 div {
-    margin: 1.5rem auto;
+    margin: 1rem auto;
     padding: 0.5rem;
     background-color: black;
     border-radius: 6px;
@@ -155,16 +253,19 @@ iframe {
 
 .col-4 a:hover {
     cursor: pointer;
-    
+
     div {
-        background-color: rgba(66, 135, 113, 0.503);    
+        background-color: rgba(66, 135, 113, 0.503);
         transition: background-color 0.4s;
     }
+
     p {
-        color: black;
-        transition: color 0.4s;
-    };
-    
+        scale: 110%;
+        transition: 0.4s;
+    }
+
+    ;
+
 }
 
 .col-4 a:not(:hover) {
@@ -172,10 +273,13 @@ iframe {
     div {
         transition: background-color 0.4s;
     }
+
     p {
-        transition: color 0.4s;
-    };
-    
+        transition: 0.4s;
+    }
+
+    ;
+
 }
 
 .col-4 p {
@@ -198,74 +302,37 @@ iframe {
     border-radius: 12px;
 }
 
-#messageDiv {
-    display: block;
-    width: 55%;
-    padding: 1.5rem;
-    margin: 1rem auto;
-    border-radius: 16px;
-    border: 5px dashed;
-    border-color: rgba(63, 205, 160, 0.76);
+/* For the entire scrollbar */
+::-webkit-scrollbar {
+    width: 14px; /* Width of the scrollbar */
 }
 
-#messageDiv p {
-    margin: 1rem auto;
+/* For the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #3a3a3a; /* Slightly lighter color for the track */
+    border-radius: 6px; /* Rounded corners for a smoother look */
 }
 
-#messageDiv div {
-    margin-bottom: 1rem;
+/* For the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #555; /* Medium color for the thumb */
+    border-radius: 6px; /* Rounded corners */
+    border: 2px solid #3a3a3a; /* Border to give a more defined look */
 }
 
-input, textarea {
-    border: 2.5px solid;
-    border-color: rgba(63, 205, 160, 0.76);
-    border-radius: 5px;
-    background-color: black;
-    color: white;
+/* For the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Slightly lighter color on hover */
 }
 
-input:focus, textarea:focus {
-    border-color: white;
-    outline: 0 none;
-    transition: 0.4s;
-}
-
-input:not(focus), textarea:not(focus) {
-    transition: 0.4s;
-}
-
-#majl {
-    width: 33%;
-}
-
-#majlText {
-    width: 90%;
-    height: 10rem;
-}
-
-button {
-    font-size: 1.25rem;
-    padding: 0.5rem 1.25rem;
-    background-color: black;
-    color: white;
-    border: 2.5px solid;
-    border-color: rgba(63, 205, 160, 0.76);
-    border-radius: 8px;
-}
-
-button:hover {
-    background-color: rgba(63, 205, 160, 0.76);
-    color: black;
-    outline: 0 none;
-    transition: 0.4s;
-}
-
-button:not(hover) {
-    transition: 0.4s;
+/* Firefox scrollbar styles */
+body {
+    scrollbar-width: auto; /* Width of the scrollbar */
+    scrollbar-color: #555 #3a3a3a; /* Color of the thumb and track */
 }
 
 @media (max-width: 768px) {
     header nav {
         display: none;
-      }
     }
+}
