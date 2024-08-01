@@ -1,5 +1,9 @@
+#icon {
+    border-radius: 2px;
+}
+
 body {
-    background-color: #080808;
+    background-color: #000000;
     font-family: "Poppins", "Open Sans", sans-serif;
     text-align: center;
 }
