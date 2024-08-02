@@ -4,7 +4,7 @@ const ytLinks = document.querySelectorAll(".yt-link");
 
 //YT LINKS
 const links = [
-  "https://www.youtube.com/embed/AdJH8bMYa0A?si=3ptjQx0YqZxFVh1i",
+  "https://www.youtube.com/embed/AdJH8bMYa0A?si=UFfQfSK4QKdnuBVT",
   "https://www.youtube.com/embed/fGD3M8FsuOw?si=bZSw30fk9SMrjpNS",
   "https://www.youtube.com/embed/tfXVENBMYIg?si=c3LiCgO62-6qUELl",
   "https://www.youtube.com/embed/Gu0pw0sGc58?si=ktcpFRcT9JnoeFDg",
@@ -63,6 +63,9 @@ window.addEventListener("load", function () {
 
 const chceckVisibility = () => {
   const elementsToAnimate = document.querySelectorAll(".opacityResize");
+  const elementsToAnimate2 = document.querySelectorAll(".slideIn");
+  const elementsToAnimate3 = document.querySelectorAll(".slideIn2");
+  const elementsToAnimate4 = document.querySelectorAll(".opacityResizePhone");
 
   elementsToAnimate.forEach((element) => {
     const rect = element.getBoundingClientRect();
@@ -72,6 +75,34 @@ const chceckVisibility = () => {
       element.classList.remove("visible");
     }
   });
+
+  elementsToAnimate2.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < (window.innerHeight - 100) && rect.bottom >= 0) {
+      element.classList.add("visible");
+    } else {
+      element.classList.remove("visible");
+    }
+  });
+
+  elementsToAnimate3.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < (window.innerHeight - 100) && rect.bottom >= 0) {
+      element.classList.add("visible");
+    } else {
+      element.classList.remove("visible");
+    }
+  });
+
+  elementsToAnimate4.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < (window.innerHeight - 100) && rect.bottom >= 0) {
+      element.classList.add("visible");
+    } else {
+      element.classList.remove("visible");
+    }
+  });
+
 };
 
 window.addEventListener("scroll", chceckVisibility);

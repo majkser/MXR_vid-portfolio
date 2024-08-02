@@ -34,7 +34,7 @@
             <ul>
                 <li><a href="#TELEDYSKI">TELEDYSKI</a></li>
                 <li><a href="#FOTOGRAFIA">FOTOGRAFIA</a></li>
-                <li><a href="">FAQ</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
                 <li><a href="">KONTAKT</a></li>
             </ul>
         </nav>
@@ -45,7 +45,7 @@
             <h2>TELEDYSKI</h2>
             <div class="row">
                 <div class="col-8">
-                    <iframe class="slideIn " id="ytFrame" width="100%" height="100%"
+                    <iframe id="ytFrame" width="100%" height="100%"
                         src="https://www.youtube.com/embed/AdJH8bMYa0A?si=3ptjQx0YqZxFVh1i" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -121,45 +121,56 @@
             <div class="opacityResize">
 
                 <div class="flexboxik-napisy">
-                    <h3>KONCERTOWA</h3>
-                    <h3>BACKSTAGE</h3>
+                    <h3 class="toDissapear">KONCERTOWA</h3>
+                    <h3 class="toDissapear">BACKSTAGE</h3>
                 </div>
                 <div class="flexboxik">
 
-                    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="images/Koncert-1.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/Koncert-28.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/koncert_MRG-22.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/koncert-Toruń-19.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/koncert_MRG-21.jpg" class="d-block w-100" alt="...">
-                            </div>
+                    <div class="opacityResizePhone">
+                        <h3 class="toBeAdded">KONCERTOWA</h3>
+                        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade"
+                            data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="3000">
+                                    <img src="images/Koncert-1.jpg" class="d-block w-100" alt="..." loading="lazy">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="images/Koncert-28.jpg" class="d-block w-100" alt="..." loading="lazy">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="images/koncert_MRG-22.jpg" class="d-block w-100" alt="..." loading="lazy">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="images/koncert-Toruń-19.jpg" class="d-block w-100" alt="..."
+                                        loading="lazy">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="images/koncert_MRG-21.jpg" class="d-block w-100" alt="..." loading="lazy">
+                                </div>
 
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/Koncert-124-2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="images/Koncert-124-2.jpg" class="d-block w-100" alt="..." loading="lazy">
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="images/zdj.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/Karol-gotowe-15.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="images/breaking-bad-9.jpg" class="d-block w-100" alt="...">
+
+                    <div class="opacityResizePhone">
+                        <h3 class="toBeAdded">BACKSTAGE</h3>
+                        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade"
+                            data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="3000">
+                                    <img src="images/zdj.jpg" class="d-block w-100" alt="..." loading="lazy">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="images/Karol-gotowe-15.jpg" class="d-block w-100" alt="..."
+                                        loading="lazy">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="images/breaking-bad-9.jpg" class="d-block w-100" alt="..." loading="lazy">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,11 +179,49 @@
             </div>
         </section>
 
-        <section>
+        <section id="FAQ">
             <h2>FAQ</h2>
+            <ul>
+                <li class="slideIn">
+                    <h3>JAKIE SĄ KOSZTA PRODUKCJI WIDEO/FOTO?</h3>
+                    <p>Każdy teledysk/sesja zdjeciowa jest wyceniana indywidualnie, w zależności od potrzeb klienta,
+                        kosztów transportu itp. Oferujemy bardzo dobry stosunek jakości do ceny.
+                    </p>
+                </li>
+                <hr>
+                <li class="slideIn2">
+                    <h3>ILE TRZEBA CZEKAĆ NA GOTOWE WIDEO/ZDJ?</h3>
+                    <p>Czas oczekiwania zależy od ilości materiału, ale zazwyczaj teledysk jest gotowy w ciągu tygodnia
+                        (max 2-3
+                        tygodnie w przypadku większej ilości zleceń), a zdjęcia w ciągu 3-4 dni (max 1-2 tygodnie w
+                        przypadku większej ilości zleceńe).
+                    </p>
+                </li>
+                <hr>
+                <li class="slideIn">
+                    <h3>W JAKIEJ JAKOŚCI NAGRYWACIE?</h3>
+                    <p>Teledyski nagrywamy i dostarczamy zawsze w jakości 4K. Materiał nagrywany jest w 10-bitach 4:2:2,
+                        co pozwala uzyskać doskonałą rozpiętość tonalną. W połączeniu z naszymi wyjątkowymi
+                        umiejętnościami koloryzacji, zapewniamy najlepsze kolory na rynku.
+                    </p>
+                </li>
+                <hr>
+                <li class="slideIn2">
+                    <h3>JAKIE SĄ ZASADY DOTYCZĄCE POPRAWEK?</h3>
+                    <p>W cenie każdego teledysku i sesji zdjęciowej uwzględnione są drobne poprawki, które nie wpływają
+                        znacząco na całość projektu, takie jak wymiana kilku pojedynczych ujęć. Poprawki wymagające
+                        większych zmian będą dodatkowo płatne.
+                    </p>
+                </li>
+            </ul>
         </section>
 
-        <footer></footer>
+        <section id="">
+            <footer>
+
+            </footer>
+        </section>
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
