@@ -105,6 +105,33 @@ const chceckVisibility = () => {
 
 };
 
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  header = document.querySelector("header");
+
+  hamburger.addEventListener("click", function() {
+    if (navLinks.style.display === "block") {
+      navLinks.style.display = "none";
+    } else {      
+      header.classList.add(".toDisplay");
+      navLinks.style.display = "block";
+    }
+  });
+});
+
+document.addEventListener("visibilitychange", function() {
+  const title = document.querySelector("title");
+
+  if (document.visibilityState === "hidden") {
+    setTimeout (() => {
+      title.innerHTML = "🎥 Wróć po najlepsze klipy!";     
+    }, 3000); 
+  } else {
+    title.innerHTML = "MXR VIDEO";
+  }
+});
+
 window.addEventListener("scroll", chceckVisibility);
 window.addEventListener("load", chceckVisibility);
 window.addEventListener("resize", chceckVisibility);
