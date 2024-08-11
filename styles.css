@@ -1,5 +1,9 @@
+#icon {
+    border-radius: 2px;
+}
+
 body {
-    background-color: #080808;
+    background-color: #000000;
     font-family: "Poppins", "Open Sans", sans-serif;
     text-align: center;
 }
@@ -13,10 +17,14 @@ header {
     position: fixed;
     top: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 7rem;
     z-index: 1000;
+}
+
+#hamburger {
+    display: none;
 }
 
 section {
@@ -135,6 +143,7 @@ a {
 
 ol {
     list-style-type: none;
+    padding: 0;
 }
 
 .flexboxik {
@@ -152,6 +161,8 @@ ol {
 }
 
 .row {
+    display: flex;
+    justify-content: space-around;
     margin: 2rem 3rem;
     height: 32rem;
 }
@@ -182,11 +193,11 @@ iframe {
 
 .slideIn {
     opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out forwards;
+    transition: opacity 0.75s ease-out, transform 1s ease-out forwards;
 }
 
 .slideIn.visible {
-    animation: slideIn 1s ease-out forwards;
+    animation: slideIn 0.75s ease-out forwards;
 }
 
 @keyframes opacityResize {
@@ -228,12 +239,12 @@ iframe {
 }
 
 .slideIn2 {
-    animation: slideIn-RtoL 1s ease-out forwards;
     opacity: 0;
+    transition: opacity 0.75s ease-out, transform 1s ease-out forwards;
 }
 
 .slideIn2.visible {
-    animation: slideIn-RtoL 1s ease-out forwards;
+    animation: slideIn-RtoL 0.75s ease-out forwards;
 }
 
 .col-4 div {
@@ -290,8 +301,14 @@ iframe {
     margin: auto;
 }
 
+.opacityResizePhone {
+    width: 80%;
+}
+
 #carouselExampleSlidesOnly {
-    width: 40%;
+    width: 80%;
+    max-height: 40rem;
+    object-fit: cover;
     margin: 2rem auto;
 }
 
@@ -302,37 +319,230 @@ iframe {
     border-radius: 12px;
 }
 
+#FAQ {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+#FAQ ul {
+    list-style: none;
+    padding: 0;
+}
+
+#FAQ h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#FAQ p {
+    font-size: 1.1rem;
+}
+
+hr {
+    height: 5px;
+    background-color: #8c8c8c;
+    border: none;
+    margin: 1.5rem auto;
+    border-radius: 2px;
+}
+
 /* For the entire scrollbar */
 ::-webkit-scrollbar {
-    width: 14px; /* Width of the scrollbar */
+    width: 14px;
+    /* Width of the scrollbar */
 }
 
 /* For the scrollbar track */
 ::-webkit-scrollbar-track {
-    background: #3a3a3a; /* Slightly lighter color for the track */
-    border-radius: 6px; /* Rounded corners for a smoother look */
+    background: #3a3a3a;
+    /* Slightly lighter color for the track */
+    border-radius: 6px;
+    /* Rounded corners for a smoother look */
 }
 
 /* For the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-    background: #555; /* Medium color for the thumb */
-    border-radius: 6px; /* Rounded corners */
-    border: 2px solid #3a3a3a; /* Border to give a more defined look */
+    background: #555;
+    /* Medium color for the thumb */
+    border-radius: 6px;
+    /* Rounded corners */
+    border: 2px solid #3a3a3a;
+    /* Border to give a more defined look */
 }
 
 /* For the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #777; /* Slightly lighter color on hover */
+    background: #777;
+    /* Slightly lighter color on hover */
 }
 
 /* Firefox scrollbar styles */
 body {
-    scrollbar-width: auto; /* Width of the scrollbar */
-    scrollbar-color: #555 #3a3a3a; /* Color of the thumb and track */
+    scrollbar-width: auto;
+    /* Width of the scrollbar */
+    scrollbar-color: #555 #3a3a3a;
+    /* Color of the thumb and track */
 }
 
+.toBeAdded {
+    display: none;
+}
+
+footer {
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(36, 36, 36));
+    color: white;
+    padding: 1rem;
+    margin: 0 auto 3rem auto;
+    width: 100%;
+    height: 5rem;
+}
+
+#footerDiv {
+    margin-top: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+#telephoneDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+footer a i{
+    font-size: 3rem;
+    color: white;
+}
+
+footer i{
+    font-size: 2rem;
+    color: white;
+}
+
+footer a i:hover {
+    color: rgba(63, 205, 160, 0.76);
+    cursor: pointer;
+    scale: 125%;
+    transition: 0.4s ease-out;
+}
+
+footer a i:not(hover) {
+    color: white;
+    scale: 100%;
+    transition: 0.4s ease-out;
+}
+
+
 @media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+        display: block;
+    }
+
+    #LoGo {
+        width: 100%;
+    }
+
+    #page-logo {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+
+
+    #page-logo a {
+        margin-right: 200px;
+    }
+
     header nav {
+        margin: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        z-index: 1;
+    }
+    
+    header nav ul {
+        display: block;
+    }
+
+    header div {
+        scale: 80%;
+    }
+
+    #hamburger {
+        color: white;
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .row {
+        justify-content: center;
+    }
+
+    .col-8 {
+        margin-top: -50px;
+        width: 130%;
+    }
+
+    .col-4 {
+        width: 130%;
+    }
+
+    .col-4 div{
+        width: 100%;
+    }
+
+    .col-4 p {
+        text-align: center;
+    }
+
+    .col-4 img {
+        max-width: 30%;
+        max-height: 30%;
+        object-fit: cover;
+        margin-right: 0.8rem;
+    }
+
+    #FOTOGRAFIA .flexboxik-napisy {
+        display: block;
+    }
+
+    #FOTOGRAFIA .flexboxik {
+        display: block;
+    }
+
+    .toDissapear {
         display: none;
     }
+
+    .toBeAdded {
+        display: block;
+    }
+
+    .opacityResize {
+        transition: none;
+    }
+
+    .opacityResizePhone {
+        width: 100%;
+        opacity: 0;
+        transition: opacityResize 0.75s ease-out forwards;
+    }
+
+    .opacityResizePhone.visible {
+        animation: opacityResize 0.75s ease-out forwards;
+    }
+
 }
