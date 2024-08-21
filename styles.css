@@ -442,20 +442,20 @@ footer a i:not(hover) {
   header {
     justify-content: space-between;
     display: block;
+    align-content: center;
+    height: auto;
+    padding: 10px;
   }
 
   #LoGo {
-    width: 150px;
+    width: 175px;
+    height: auto;
   }
 
   #page-logo {
     display: flex;
     justify-content: space-between;
     align-content: center;
-  }
-
-  #page-logo a {
-    margin-right: 200px;
   }
 
   header #nav-links {
@@ -539,16 +539,15 @@ footer a i:not(hover) {
     z-index: 1000;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-color: #000;
-
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    transform: translateX(200%);
+    transition: transform 0.5s ease-in-out;
   }
 
   .show-mobile {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
 
   .mobile-menu-list {
