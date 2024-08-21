@@ -69,7 +69,7 @@ const chceckVisibility = () => {
 
   elementsToAnimate.forEach((element) => {
     const rect = element.getBoundingClientRect();
-    if (rect.top < (window.innerHeight - 100) && rect.bottom >= 0) {
+    if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
       element.classList.add("visible");
     } else {
       element.classList.remove("visible");
@@ -78,7 +78,7 @@ const chceckVisibility = () => {
 
   elementsToAnimate2.forEach((element) => {
     const rect = element.getBoundingClientRect();
-    if (rect.top < (window.innerHeight - 100) && rect.bottom >= 0) {
+    if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
       element.classList.add("visible");
     } else {
       element.classList.remove("visible");
@@ -87,7 +87,7 @@ const chceckVisibility = () => {
 
   elementsToAnimate3.forEach((element) => {
     const rect = element.getBoundingClientRect();
-    if (rect.top < (window.innerHeight - 100) && rect.bottom >= 0) {
+    if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
       element.classList.add("visible");
     } else {
       element.classList.remove("visible");
@@ -96,38 +96,21 @@ const chceckVisibility = () => {
 
   elementsToAnimate4.forEach((element) => {
     const rect = element.getBoundingClientRect();
-    if (rect.top < (window.innerHeight - 100) && rect.bottom >= 0) {
+    if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
       element.classList.add("visible");
     } else {
       element.classList.remove("visible");
     }
   });
-
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  const div = document.getElementById("page-logo");
-
-  hamburger.addEventListener("click", function() {
-    if (navLinks.style.display === "block") {
-      navLinks.style.display = "none";
-    } else {      
-
-      navLinks.style.display = "block";      
-
-    }
-  });
-});
-
-document.addEventListener("visibilitychange", function() {
+document.addEventListener("visibilitychange", function () {
   const title = document.querySelector("title");
 
   if (document.visibilityState === "hidden") {
-    setTimeout (() => {
-      title.innerHTML = "🎥 Wróć po najlepsze klipy!";     
-    }, 3000); 
+    setTimeout(() => {
+      title.innerHTML = "🎥 Wróć po najlepsze klipy!";
+    }, 3000);
   } else {
     title.innerHTML = "MXR VIDEO";
   }
@@ -136,3 +119,21 @@ document.addEventListener("visibilitychange", function() {
 window.addEventListener("scroll", chceckVisibility);
 window.addEventListener("load", chceckVisibility);
 window.addEventListener("resize", chceckVisibility);
+
+// Mobile menu
+const toggleBtn = document.querySelector("#hamburger");
+
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileMenuClose = document.querySelector(".mobile-menu-close");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu li");
+
+toggleBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("show-mobile");
+});
+
+const closeMenu = () => {
+  mobileMenu.classList.remove("show-mobile");
+};
+
+mobileMenuClose.addEventListener("click", closeMenu);
+mobileMenuLinks.forEach((link) => link.addEventListener("click", closeMenu));
