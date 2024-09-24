@@ -72,7 +72,7 @@ const chceckVisibility = () => {
     if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
       element.classList.add("visible");
     } else {
-      element.classList.remove("visible");
+      return;
     }
   });
 
@@ -81,7 +81,7 @@ const chceckVisibility = () => {
     if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
       element.classList.add("visible");
     } else {
-      element.classList.remove("visible");
+      return;
     }
   });
 
@@ -90,7 +90,7 @@ const chceckVisibility = () => {
     if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
       element.classList.add("visible");
     } else {
-      element.classList.remove("visible");
+      return;
     }
   });
 
@@ -99,7 +99,7 @@ const chceckVisibility = () => {
     if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
       element.classList.add("visible");
     } else {
-      element.classList.remove("visible");
+      return;
     }
   });
 };
