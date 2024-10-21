@@ -4,12 +4,12 @@ const ytLinks = document.querySelectorAll(".yt-link");
 
 //YT LINKS
 const links = [
-  "https://www.youtube.com/embed/tF6YvDpztQk?si=lECibm5Z3xhVymmI",
+  "https://www.youtube.com/embed/Gu0pw0sGc58?si=ktcpFRcT9JnoeFDg",
   "https://www.youtube.com/embed/fGD3M8FsuOw?si=bZSw30fk9SMrjpNS",
   "https://www.youtube.com/embed/tfXVENBMYIg?si=c3LiCgO62-6qUELl",
-  "https://www.youtube.com/embed/Gu0pw0sGc58?si=ktcpFRcT9JnoeFDg",
+  "https://www.youtube.com/embed/6cT0TqF-1w0?si=Sck8nic56IyO5iRs",
   "https://www.youtube.com/embed/24T23LulWeA?si=GJPUfcV0KoQezEz6",
-  "https://www.youtube.com/embed/HQuSY1cSmro?si=Dxvm0bTufUl-hfOu",
+  "https://www.youtube.com/embed/tF6YvDpztQk?si=lECibm5Z3xhVymmI",
 ];
 
 function changeSrc(link, event) {
