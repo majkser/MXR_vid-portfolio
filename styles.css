@@ -443,6 +443,11 @@ footer a i:not(hover) {
 }
 
 @media (max-width: 768px) {
+
+  main {
+    overflow-x: hidden;
+  }
+
   header {
     justify-content: space-between;
     display: block;
@@ -454,6 +459,16 @@ footer a i:not(hover) {
   #LoGo {
     width: 175px;
     height: auto;
+  }
+
+  #TELEDYSKI h2 {
+    margin-bottom: 8rem;
+  }
+
+  .row {
+    transition: none;
+    width: 95%;
+    margin: 4rem auto 0 auto;
   }
 
   #page-logo {
@@ -478,6 +493,13 @@ footer a i:not(hover) {
     border: none;
     cursor: pointer;
   }
+
+  #FAQ{
+    width: 100%;
+    margin: 0;
+    padding: 0 0.75rem;
+  }
+
 
   .row {
     justify-content: center;
@@ -525,10 +547,15 @@ footer a i:not(hover) {
 
   .opacityResize {
     transition: none;
+    position: relative;
+    width: 120%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .opacityResizePhone {
     width: 100%;
+    margin: 0 auto;
     opacity: 0;
     transition: opacityResize 0.75s ease-out forwards;
   }
