@@ -105,7 +105,6 @@ main {
   color: white;
 }
 
-
 .flexboxik {
   display: flex;
   justify-content: space-around;
@@ -124,6 +123,10 @@ section {
 #TELEDYSKI {
   margin: 0 auto;
   max-width: 1800px;
+}
+
+#TELEDYSKI img {
+  z-index: 1;
 }
 
 #FOTOGRAFIA {
@@ -443,7 +446,6 @@ footer a i:not(hover) {
 }
 
 @media (max-width: 768px) {
-
   main {
     overflow-x: hidden;
   }
@@ -494,12 +496,11 @@ footer a i:not(hover) {
     cursor: pointer;
   }
 
-  #FAQ{
+  #FAQ {
     width: 100%;
     margin: 0;
     padding: 0 0.75rem;
   }
-
 
   .row {
     justify-content: center;

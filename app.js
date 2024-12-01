@@ -4,7 +4,7 @@ const ytLinks = document.querySelectorAll(".yt-link");
 
 //YT LINKS
 const links = [
-  "https://www.youtube.com/embed/Gu0pw0sGc58?si=ktcpFRcT9JnoeFDg",
+  "https://www.youtube.com/embed/nz3di1xA6FM?si=h_etIRyj4IPOm0GY",
   "https://www.youtube.com/embed/fGD3M8FsuOw?si=bZSw30fk9SMrjpNS",
   "https://www.youtube.com/embed/tfXVENBMYIg?si=c3LiCgO62-6qUELl",
   "https://www.youtube.com/embed/6cT0TqF-1w0?si=Sck8nic56IyO5iRs",
