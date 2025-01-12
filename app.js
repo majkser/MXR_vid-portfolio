@@ -9,7 +9,7 @@ const links = [
   "https://www.youtube.com/embed/tfXVENBMYIg?si=c3LiCgO62-6qUELl",
   "https://www.youtube.com/embed/6cT0TqF-1w0?si=Sck8nic56IyO5iRs",
   "https://www.youtube.com/embed/24T23LulWeA?si=GJPUfcV0KoQezEz6",
-  "https://www.youtube.com/embed/tF6YvDpztQk?si=lECibm5Z3xhVymmI",
+  "https://www.youtube.com/embed/84l8fGwjOMs?si=OzgSUYPw4WfmcJ7U",
 ];
 
 function changeSrc(link, event) {
@@ -128,12 +128,19 @@ const mobileMenuClose = document.querySelector(".mobile-menu-close");
 const mobileMenuLinks = document.querySelectorAll(".mobile-menu li");
 
 toggleBtn.addEventListener("click", () => {
-  mobileMenu.classList.add("show-mobile");
+  mobileMenu.classList.toggle("show-mobile");
 });
 
-const closeMenu = () => {
-  mobileMenu.classList.remove("show-mobile");
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const updateHeaderHeight = () => {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
+  };
 
-mobileMenuClose.addEventListener("click", closeMenu);
-mobileMenuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+  // Update on load and resize
+  updateHeaderHeight();
+  window.addEventListener("resize", updateHeaderHeight);
+});
