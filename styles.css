@@ -27,10 +27,6 @@ header {
   z-index: 1000;
 }
 
-#hamburger {
-  display: none;
-}
-
 section {
   padding-top: 150px;
 }
@@ -445,6 +441,10 @@ footer a i:not(hover) {
   display: none;
 }
 
+.container {
+  display: none;
+}
+
 @media (max-width: 768px) {
   main {
     overflow-x: hidden;
@@ -455,7 +455,7 @@ footer a i:not(hover) {
     display: block;
     align-content: center;
     height: auto;
-    padding: 10px;
+    padding: 5px;
   }
 
   #LoGo {
@@ -487,14 +487,69 @@ footer a i:not(hover) {
     scale: 80%;
   }
 
-  #hamburger {
-    color: white;
-    display: block;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+  /* hambueger-icon */
+
+  .container {
+    width: min-content;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
   }
+  svg {
+    width: 100px;
+    height: 100px;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .active svg {
+    transform: rotate(90deg);
+  }
+  path {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  path:nth-child(1) {
+    transform-origin: 36% 40%;
+  }
+  path:nth-child(2) {
+    stroke-dasharray: 29 299;
+  }
+  path:nth-child(3) {
+    transform-origin: 35% 63%;
+  }
+  path:nth-child(4) {
+    stroke-dasharray: 29 299;
+  }
+  path:nth-child(5) {
+    transform-origin: 61% 52%;
+  }
+  path:nth-child(6) {
+    transform-origin: 62% 52%;
+  }
+  .active path:nth-child(1) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+  }
+  .active path:nth-child(2) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+  }
+  .active path:nth-child(3) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+  }
+  .active path:nth-child(4) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+  }
+  .active path:nth-child(5) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+  }
+  .active path:nth-child(6) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+  }
+
+  /* hambueger-icon */
 
   #FAQ {
     width: 100%;
@@ -568,22 +623,26 @@ footer a i:not(hover) {
   .mobile-menu {
     display: block;
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 40%;
     height: 100%;
-    background-color: #000;
-    transform: translateX(200%);
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    transform: translateX(300%);
     transition: transform 0.5s ease-in-out;
+    padding: 2rem 0;
   }
 
   .show-mobile {
-    transform: translateX(100%);
+    transform: translateX(150%);
   }
 
   .mobile-menu-list {
-    padding-top: 5rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 7rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -591,10 +650,21 @@ footer a i:not(hover) {
 
   .mobile-menu-list a {
     color: rgb(63, 205, 160);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    display: block;
+    transition: all 0.3s ease;
   }
 
-  .mobile-menu-close {
+  .mobile-menu-list a:hover {
+    transform: translateX(-10px);
+  }
+
+  .mobile-menu-list li:hover {
+    background: rgba(63, 205, 160, 0.1);
+  }
+
+  /* .mobile-menu-close {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -603,5 +673,5 @@ footer a i:not(hover) {
     border: transparent;
     color: rgb(63, 205, 160);
     font-size: 2rem;
-  }
+  } */
 }

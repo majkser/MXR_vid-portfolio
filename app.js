@@ -128,12 +128,19 @@ const mobileMenuClose = document.querySelector(".mobile-menu-close");
 const mobileMenuLinks = document.querySelectorAll(".mobile-menu li");
 
 toggleBtn.addEventListener("click", () => {
-  mobileMenu.classList.add("show-mobile");
+  mobileMenu.classList.toggle("show-mobile");
 });
 
-const closeMenu = () => {
-  mobileMenu.classList.remove("show-mobile");
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const updateHeaderHeight = () => {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
+  };
 
-mobileMenuClose.addEventListener("click", closeMenu);
-mobileMenuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+  // Update on load and resize
+  updateHeaderHeight();
+  window.addEventListener("resize", updateHeaderHeight);
+});
