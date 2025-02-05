@@ -131,6 +131,17 @@ toggleBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("show-mobile");
 });
 
+document.addEventListener("click", (event) => {
+  if (
+    mobileMenu.classList.contains("show-mobile") &&
+    !event.target.closest(".mobile-menu") &&
+    !event.target.closest(".container")
+  ) {
+    mobileMenu.classList.remove("show-mobile");
+    toggleBtn.classList.remove("active");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const updateHeaderHeight = () => {
     const headerHeight = document.querySelector("header").offsetHeight;
