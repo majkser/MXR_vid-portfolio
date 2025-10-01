@@ -6,8 +6,8 @@ const ytLinks = document.querySelectorAll(".yt-link");
 const links = [
   "https://www.youtube.com/embed/QzIVKJBwLfA?si=5qdMiAlic2bD5jLE",
   "https://www.youtube.com/embed/nz3di1xA6FM?si=h_etIRyj4IPOm0GY",
-  "https://www.youtube.com/embed/tfXVENBMYIg?si=c3LiCgO62-6qUELl",
-  "https://www.youtube.com/embed/6cT0TqF-1w0?si=Sck8nic56IyO5iRs",
+  "https://www.youtube.com/embed/djwc0iPDORk?si=vF9s77T6OENvKuo5",
+  "https://www.youtube.com/embed/WnevlN25YJs?si=GA79zjG4vxM3zlbx",
   "https://www.youtube.com/embed/24T23LulWeA?si=GJPUfcV0KoQezEz6",
   "https://www.youtube.com/embed/84l8fGwjOMs?si=OzgSUYPw4WfmcJ7U",
 ];
